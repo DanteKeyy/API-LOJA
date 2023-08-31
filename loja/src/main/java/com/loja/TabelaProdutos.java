@@ -29,4 +29,15 @@ public class TabelaProdutos {
 
 
     }
+
+    public List<Produto> getProdutos() {
+        return produtos;
+    }
+
+    /**
+     * Metodo que retorna todos os produtos da lista
+     */
+    public List<Produto> buscarTodososProdutos() {
+        return this.getProdutos();
+    }
 }
