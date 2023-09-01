@@ -68,4 +68,22 @@ public class TabelaProdutos {
 
     }
 
+    /**
+     * Metodo que atualiza um produto
+     * Primeiro busca o produto a atualizar pelo ID
+     * Depois atribui as novas informações:
+     * Nome, Descrição e Valor Unitario
+     * FInalmente salva o produto atualizado
+     * @param produtoID
+     * @param produtoAtualizar
+     */
+    public void atualizarProduto( int produtoID, Produto produtoAtualizar) {
+        Produto produtoProcurado = this.buscarProdutoID(produtoID);
+        if (produtoProcurado != null) {
+            produtoProcurado.setNome(produtoAtualizar.getNome());
+            produtoProcurado.setDescricao(produtoAtualizar.getDescricao());
+            produtoProcurado.setValorUnitario(produtoAtualizar.getValorUnitario());
+        }
+    }
+
 }
