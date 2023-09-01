@@ -86,4 +86,16 @@ public class TabelaProdutos {
         }
     }
 
+    /**
+     * Metodo que remove um produto da lista
+     * Utiliza como base o proprio prodyto para remover
+     * @param produtoID
+     */
+    public void removerProduto(int produtoID) {
+        Produto produtoRemover = this.buscarProdutoID(produtoID);
+        this.produtos.remove(produtoRemover);
+
+}
+
+
 }
