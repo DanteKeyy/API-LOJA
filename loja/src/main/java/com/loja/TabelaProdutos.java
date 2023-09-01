@@ -58,4 +58,14 @@ public class TabelaProdutos {
         return produtoProcurado;
     }
 
+    public Produto cadastrarNovoProduto(Produto novoProduto) {
+    int ultimoIndex = this.produtos.size() -1;
+    Produto ultimoProduto = this.produtos.get(ultimoIndex);
+    int proximoID = ultimoProduto.getId() + 1;
+    novoProduto.setId(proximoID);
+    this.produtos.add(novoProduto);
+    return novoProduto;
+
+    }
+
 }
