@@ -40,4 +40,22 @@ public class TabelaProdutos {
     public List<Produto> buscarTodososProdutos() {
         return this.getProdutos();
     }
+
+    /**
+     * Metodo que busca um produto pelo seu ID
+     * Caso não encontre, irá retornar nulo
+     *
+     * @return
+     */
+    public Produto buscarProdutoID(int produtoId) {
+        Produto produtoProcurado = null;
+        for (Produto p: this.produtos) {
+            if (p.getId() == produtoId) {
+                produtoProcurado = p;
+                break;
+            }
+        }
+        return produtoProcurado;
+    }
+
 }
